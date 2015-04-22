@@ -1,5 +1,5 @@
 {
-    "acl_default_policy": "deny",
+    "acl_default_policy": "allow",
     "acl_master_token": "the_one_ring",
     "acl_datacenter": "dc1",
     "data_dir": "/data",
