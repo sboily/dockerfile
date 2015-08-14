@@ -24,3 +24,5 @@ With the sources
     make chown
     cd ..
     docker run --rm --name siremis -v $(pwd):/var/www/ -p 8080:80 quintana/siremis
+
+Open your browser to http://<your_ip>:8080 and enjoy!
