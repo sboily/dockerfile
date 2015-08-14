@@ -22,8 +22,8 @@ RUN apt-get -qq update && \
 RUN a2enmod rewrite
 
 # Add apache config
-ADD apache/000-default.conf /etc/apache2/sites-available/
-ONBUILD ADD apache/*.conf /etc/apache2/sites-available/
+ADD apache/default /etc/apache2/sites-available/
+ONBUILD ADD apache/* /etc/apache2/sites-available/
 
 # Install siremis
 ADD http://siremis.asipto.com/pub/downloads/siremis/siremis-4.2.0.tgz /usr/src/
