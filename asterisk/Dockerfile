@@ -44,7 +44,7 @@ RUN ldconfig
 WORKDIR /usr/src
 RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
 RUN tar xfvz asterisk-13-current.tar.gz
-WORKDIR /usr/src/asterisk-13.2.0
+WORKDIR /usr/src/asterisk-13.3.2
 RUN ./configure
 RUN make
 RUN make install
