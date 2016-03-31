@@ -1,7 +1,7 @@
 ## Image to build from sources
 
-FROM debian:latest
-MAINTAINER Sylvain Boily "sboily@avencall.com"
+FROM debian:jessie
+MAINTAINER Sylvain Boily "sboily@proformatique.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
@@ -30,9 +30,9 @@ RUN apt-get -qq -y install \
 
 # Install pjproject
 WORKDIR /usr/src
-RUN wget http://www.pjsip.org/release/2.2.1/pjproject-2.2.1.tar.bz2
-RUN tar -xjvf pjproject-2.2.1.tar.bz2
-WORKDIR /usr/src/pjproject-2.2.1
+RUN wget http://www.pjsip.org/release/2.4.5/pjproject-2.4.5.tar.bz2
+RUN tar -xjvf pjproject-2.4.5.tar.bz2
+WORKDIR /usr/src/pjproject-2.4.5
 ENV CFLAGS -DPJ_HAS_IPV6=1
 RUN ./configure --prefix=/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr
 RUN make dep
@@ -44,7 +44,7 @@ RUN ldconfig
 WORKDIR /usr/src
 RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-13-current.tar.gz
 RUN tar xfvz asterisk-13-current.tar.gz
-WORKDIR /usr/src/asterisk-13.3.2
+WORKDIR /usr/src/asterisk-13.8.0
 RUN ./configure
 RUN make
 RUN make install
