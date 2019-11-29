@@ -1,5 +1,0 @@
-ldap:
-  uri: ldap://94.143.118.137
-  basedn: ou=people,dc=avencall,dc=com
-  prefix: uid
-  domain: avencall.com
