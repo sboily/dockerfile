@@ -1,0 +1,11 @@
+{
+    "acl_default_policy": "deny",
+    "acl_master_token": "a2698ad707066238727de8d3eb7439a5adc459a6638d5b89135751232d34069d",
+    "acl_datacenter": "france",
+    "datacenter": "quebec",
+    "data_dir": "/data",
+    "ui_dir": "/ui",
+    "encrypt": "cyN0v0mwLzn+xYOV1J437Q==",
+    "client_addr": "0.0.0.0",
+    "disable_update_check": true
+}
